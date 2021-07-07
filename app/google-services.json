@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "31984757425",
+    "firebase_url": "https://airbasetabbed.firebaseio.com",
+    "project_id": "airbasetabbed",
+    "storage_bucket": "airbasetabbed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:31984757425:android:89af086c3f4cc9a07ad090",
+        "android_client_info": {
+          "package_name": "com.tomykrisgreen.airbasetabbed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "31984757425-dgjbqq9egi5g616s3ki50kjrqh2fglau.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYrdpJ-9WvYS5_Vtje_8E7eRNkmMCyTyY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "31984757425-dgjbqq9egi5g616s3ki50kjrqh2fglau.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.HomeKotlinFragment">
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/story_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="5dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_story"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </androidx.recyclerview.widget.RecyclerView>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/postRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/story_card"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/no_posts"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="No Posts Available"-->
+            <!--                android:textSize="20sp"-->
+            <!--                android:textColor="@color/colorWhite"-->
+            <!--                android:fontFamily="@font/berkshireswash_regular"-->
+            <!--                android:background="#72000000"-->
+            <!--                android:layout_centerInParent="true"/>-->
+            
+<!--            <com.getbase.floatingactionbutton.FloatingActionsMenu-->
+<!--                android:id="@+id/usersListParent"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:fab_expandDirection="up"-->
+<!--                app:fab_labelsPosition="left"-->
+<!--                app:fab_labelStyle="@style/LabelStyle">-->
+
+
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/usersList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fabSize="mini"
+                    app:fab_title="List of Users"
+                    app:fab_colorNormal="#000000"
+                    app:fab_colorPressed="#2196F3"
+                    app:fab_expandDirection="left"
+                    app:fab_labelsPosition="left"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="60dp"
+                    app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+                    android:src="@drawable/ic_contacts"
+                    app:backgroundTint="@color/colorPrimaryDark" />
+
+<!--            </com.getbase.floatingactionbutton.FloatingActionsMenu>-->
+
+
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</RelativeLayout>

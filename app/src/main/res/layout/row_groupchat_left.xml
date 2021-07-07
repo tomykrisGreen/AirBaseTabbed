@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/messageLayoutGroup"
+    android:padding="2dp">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+       <TextView
+           android:id="@+id/nameTv_GroupChat"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Name"
+           android:padding="2dp"
+           android:layout_marginStart="15dp"
+           android:textColor="@color/colorPrimary"
+           android:background="@color/colorTextSubtitle"
+           android:textStyle="bold"/>
+
+
+       <RelativeLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:padding="3dp"
+               android:background="@drawable/bg_receiver"
+               android:orientation="vertical">
+
+               <TextView
+                   android:id="@+id/messageTv_GroupChat"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:maxWidth="250dp"
+                   android:textSize="16sp"
+                   android:textColor="@color/colorBlack"
+                   android:text="The Message"
+                   android:layout_marginStart="15dp"
+                   android:layout_marginEnd="5dp"/>
+
+               <TextView
+                   android:id="@+id/timeTv_GroupChat"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Time"
+                   android:textColor="#615C5C"
+                   android:textSize="10sp"
+                   android:layout_gravity="right"
+                   android:layout_marginStart="15dp"
+                   android:layout_marginBottom="2dp"
+                   android:layout_marginEnd="10dp"/>
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="10dp"
+               android:background="@drawable/bg_receiver"
+               android:orientation="vertical">
+
+               <ImageView
+                   android:id="@+id/messageIv_GroupChat"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:maxWidth="250dp"
+                   android:maxHeight="300dp"
+                   android:adjustViewBounds="true"
+                   android:layout_marginStart="10dp"
+                   android:scaleType="fitCenter"
+                   android:src="@drawable/ic_image_black"/>
+
+               <TextView
+                   android:id="@+id/timeTv_GroupChat_Iv"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Time"
+                   android:textColor="#615C5C"
+                   android:textSize="10sp"
+                   android:layout_gravity="right"
+                   android:layout_marginStart="15dp"
+                   android:layout_marginBottom="2dp"
+                   android:layout_marginEnd="10dp"/>
+           </LinearLayout>
+       </RelativeLayout>
+   </LinearLayout>
+
+</LinearLayout>

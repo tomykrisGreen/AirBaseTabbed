@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1EDED"
+    tools:context=".ThereProfileActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/coverIv"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:scaleType="fitXY"
+            android:background="@color/colorPrimaryDark"/>
+
+
+
+            <LinearLayout
+                android:id="@+id/av"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="100dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/avatarIV"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/profile" />
+
+                <Button
+                    android:id="@+id/edit_account_settings_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="45dp"
+                    android:background="@drawable/buttons_background"
+                    android:text="Follow"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/user_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#77000000"
+            android:layout_below="@+id/av">
+
+            <TextView
+                android:id="@+id/nameTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:textSize="25sp"
+                android:textColor="@color/colorWhite"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:id="@+id/emailTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/colorWhite"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:id="@+id/phoneTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/colorWhite"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+
+        <!-- RecyclerView: User specific posts -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_posts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/user_info"/>
+    </RelativeLayout>
+
+</ScrollView>

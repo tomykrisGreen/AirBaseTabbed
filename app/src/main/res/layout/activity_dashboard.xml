@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DashboardActivity">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+
+       <!-- FrameLayout: Show fragments-->
+       <FrameLayout
+           android:id="@+id/content"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="1">
+       </FrameLayout>
+
+       <!--    <com.etebarian.meowbottomnavigation.MeowBottomNavigation-->
+       <!--        android:id="@+id/bottom_navigation"-->
+       <!--        android:layout_width="match_parent"-->
+       <!--        android:layout_height="wrap_content"-->
+       <!--        app:mbn_circleColor="@color/colorWhite"-->
+       <!--        app:mbn_selectedIconColor="#3c415e"-->
+       <!--        app:mbn_countTextColor="@color/colorWhite"-->
+       <!--        app:mbn_countBackgroundColor="#ff6f00"-->
+       <!--        app:mbn_defaultIconColor="@color/colorWhite"-->
+       <!--        app:mbn_backgroundBottomColor="#3c415e"/>-->
+
+       <!--    <WebView-->
+       <!--        android:id="@+id/webView"-->
+       <!--        android:layout_width="match_parent"-->
+       <!--        android:layout_height="wrap_content"/>-->
+
+       <TextView
+           android:id="@+id/internetConnectivity"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:visibility="gone"/>
+
+
+   </LinearLayout>
+
+    <!-- Bottom Navigation: show Menu -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        app:labelVisibilityMode="labeled"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/windowBackground"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+        app:itemBackground="@color/colorBottomNav"
+        app:itemIconTint="@color/bottom_nav_color_selector"
+        app:itemTextColor="@color/bottom_nav_color_selector"
+        app:itemHorizontalTranslationEnabled="true"
+        app:itemRippleColor="@color/colorLink"
+        app:menu="@menu/menu_nav">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="1dp"
+    app:contentPadding="2dp"
+    app:cardBackgroundColor="@color/colorWhite">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginEnd="10dp"
+           android:layout_marginStart="15sp">
+
+           <de.hdodenhof.circleimageview.CircleImageView
+               android:id="@+id/avatarIv"
+               android:layout_width="40dp"
+               android:layout_height="40dp"
+               android:layout_marginEnd="5dp"
+               android:layout_marginRight="5dp"
+               android:src="@drawable/ic_default_img"/>
+
+           <TextView
+               android:id="@+id/nameTvC"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_toRightOf="@id/avatarIv"
+               android:text="Tommy"
+               android:singleLine="true"
+               android:ellipsize="marquee"
+               android:textColor="@color/colorBlack"
+               android:textSize="14sp"
+               android:textStyle="bold"
+               android:layout_marginStart="5dp"/>
+
+           <TextView
+               android:id="@+id/commentTv"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/nameTvC"
+               android:layout_toEndOf="@id/avatarIv"
+               android:text="Actual Comment"
+               android:singleLine="true"
+               android:ellipsize="marquee"
+               android:layout_marginStart="5dp"
+               android:layout_toRightOf="@id/avatarIv"
+               android:textColor="@color/colorBlack"/>
+
+           <TextView
+               android:id="@+id/timeTvC"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Time"
+               android:singleLine="true"
+               android:ellipsize="marquee"
+               android:layout_marginStart="5dp"
+               android:layout_below="@id/commentTv"
+               android:layout_toEndOf="@id/avatarIv"
+               android:textSize="10sp"/>
+
+       </RelativeLayout>
+
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="2dp"
+           android:background="#F5F0F0"/>
+   </LinearLayout>
+
+</androidx.cardview.widget.CardView>

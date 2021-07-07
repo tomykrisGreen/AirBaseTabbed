@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:contentPadding="3dp"
+    android:layout_marginTop="1dp">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/groupIconIv_Group"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_group_primary"/>
+
+        <TextView
+            android:id="@+id/groupTitleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textSize="18sp"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack"
+            android:layout_toEndOf="@id/groupIconIv_Group"
+            android:text="Group Title"/>
+
+        <TextView
+            android:id="@+id/nameTvGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Sender Name"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack"
+            android:layout_toEndOf="@id/groupIconIv_Group"
+            android:layout_below="@id/groupTitleTv"/>
+
+        <TextView
+            android:id="@+id/messageTvGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Message"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/nameTvGroup"
+            android:layout_below="@id/groupTitleTv"/>
+
+        <TextView
+            android:id="@+id/timeTvGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:singleLine="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            android:layout_below="@id/nameTvGroup"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

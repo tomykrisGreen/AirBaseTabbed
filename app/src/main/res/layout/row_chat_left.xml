@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/messageLayout"
+    android:padding="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileIv"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:civ_border_color="@null"
+            android:src="@drawable/ic_default_img"/>
+
+       <RelativeLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:padding="3dp"
+               android:background="@drawable/bg_receiver">
+
+               <TextView
+                   android:id="@+id/messageTv"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:maxWidth="250dp"
+                   android:textSize="16sp"
+                   android:textColor="@color/colorBlack"
+                   android:text="His Message"
+                   android:layout_marginStart="15dp"
+                   android:layout_marginEnd="5dp"
+                   android:visibility="gone"/>
+
+               <TextView
+                   android:id="@+id/timeTv"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Time"
+                   android:textColor="#615C5C"
+                   android:textSize="10sp"
+                   android:layout_gravity="right"
+                   android:layout_marginStart="15dp"
+                   android:layout_marginBottom="2dp"
+                   android:layout_marginEnd="10dp"/>
+
+           </LinearLayout>
+
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:layout_marginStart="10dp"
+               android:background="@drawable/bg_receiver">
+
+               <ImageView
+                   android:id="@+id/messageIv"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:maxWidth="250dp"
+                   android:maxHeight="300dp"
+                   android:adjustViewBounds="true"
+                   android:padding="2dp"
+                   android:layout_marginStart="10dp"
+                   android:scaleType="fitCenter"
+                   android:src="@drawable/ic_image_black"/>
+
+               <TextView
+                   android:id="@+id/timeTvIv"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Time"
+                   android:textColor="#615C5C"
+                   android:textSize="10sp"
+                   android:layout_gravity="end"
+                   android:layout_marginBottom="2dp"
+                   android:layout_marginEnd="10dp"/>
+           </LinearLayout>
+       </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/isSeenTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:visibility="gone"
+        android:textAlignment="textEnd"
+        android:text="Delievered"
+        android:textSize="10sp"/>
+</LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CatalogShop.CompanyInfoActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/app_bar_layout_company_info"
+        android:background="@android:color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/company_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@android:color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Company Info"
+                    android:textSize="18sp"
+                    android:maxLines="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ImageView
+        android:id="@+id/company_cover_catalog"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/sea_rainbow"
+        android:scaleType="centerCrop"
+        android:layout_below="@+id/app_bar_layout_company_info"/>
+
+    <LinearLayout
+        android:id="@+id/p"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/company_cover_catalog">
+
+        <EditText
+            android:id="@+id/company_name_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Company Name"
+            android:textSize="25sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/company_description_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Company description"
+            android:layout_marginTop="5dp"
+            android:maxLines="6"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/save_company_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/p"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#673AB7"
+        android:text="Save Info"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textAllCaps="false"/>
+
+</RelativeLayout>

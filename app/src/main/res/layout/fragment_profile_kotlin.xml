@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.ProfileKotlinFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/top_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/coverIv"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/river_flow" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="90dp">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/avatarIv_Profile"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/profile" />
+
+                                <ProgressBar
+                                    android:id="@+id/progressBar_profile_image"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:layout_marginTop="38dp"
+                                    android:layout_marginStart="27dp"/>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="155dp"
+                                android:layout_marginStart="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/nameTV"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_toStartOf="@+id/options_view"
+                                    android:padding="3dp"
+                                    android:text="Fullname"
+                                    android:inputType="textCapSentences|text"
+                                    android:singleLine="true"
+                                    android:ellipsize="marquee"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="15sp"
+                                    android:autoSizeMinTextSize="15sp"
+                                    android:autoSizeStepGranularity="2sp"
+                                    android:autoSizeTextType="uniform"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:id="@+id/options_view"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginEnd="10dp"
+                                    android:src="@drawable/ic_options" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <!-- Follow button and post review counts -->
+                        <LinearLayout
+                            android:id="@+id/top_bar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!-- User Info - showing only if filled -->
+                                    <LinearLayout
+                                        android:id="@+id/mid_bar"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical"
+                                        android:padding="2dp">
+
+                                        <TextView
+                                            android:id="@+id/profile_fragment_username"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:singleLine="true"
+                                            android:ellipsize="marquee"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="13sp"
+                                            android:textStyle="bold"
+                                            android:visibility="gone" />
+
+                                        <TextView
+                                            android:id="@+id/profile_fragment_status"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:maxLines="5"
+                                            android:ellipsize="marquee"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="13sp"
+                                            android:layout_marginTop="4dp"
+                                            android:visibility="gone" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:layout_marginTop="4dp">
+
+                                            <RelativeLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content">
+
+                                                <ImageView
+                                                    android:id="@+id/image_location"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="15dp"
+                                                    android:src="@drawable/ic_location"
+                                                    android:visibility="gone" />
+                                            </RelativeLayout>
+
+                                            <TextView
+                                                android:id="@+id/profile_fragment_state"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textColor="@android:color/black"
+                                                android:textSize="13sp"
+                                                android:layout_marginStart="3dp"
+                                                android:autoSizeMinTextSize="13sp"
+                                                android:autoSizeStepGranularity="2sp"
+                                                android:autoSizeTextType="uniform"
+                                                android:visibility="gone" />
+
+                                            <TextView
+                                                android:id="@+id/profile_comma"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text=","
+                                                android:textColor="@android:color/black"
+                                                android:textSize="13sp"
+                                                android:layout_marginStart="1dp"
+                                                android:visibility="gone" />
+
+                                            <TextView
+                                                android:id="@+id/profile_fragment_country"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textColor="@android:color/black"
+                                                android:textSize="13sp"
+                                                android:layout_marginStart="4dp"
+                                                android:visibility="gone" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:layout_marginTop="4dp">
+
+                                            <ImageView
+                                                android:id="@+id/image_weblink"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="15dp"
+                                                android:src="@drawable/ic_web_link"
+                                                android:visibility="gone" />
+
+                                            <TextView
+                                                android:id="@+id/profile_fragment_web_link"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:autoLink="email|web|all"
+                                                android:textColor="@android:color/black"
+                                                android:textSize="13sp"
+                                                android:layout_marginStart="3dp"
+                                                android:visibility="gone" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+
+
+                            <!-- Followings Review and Edit Profile Button -->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="3dp"
+                                app:cardElevation="3dp"
+                                app:cardUseCompatPadding="true"
+                                app:cardBackgroundColor="@color/colorWhite">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="150dp"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:id="@+id/no_of_posts"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/total_posts"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="0"
+                                                android:textColor="@android:color/black"
+                                                android:textSize="12sp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Posts"
+                                                android:textColor="@android:color/black"
+                                                android:textSize="12sp" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/no_of_followers"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="7dp"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/total_followers"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="0"
+                                                android:textColor="@android:color/black"
+                                                android:textSize="12sp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Followers"
+                                                android:textColor="@android:color/black"
+                                                android:textSize="12sp" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/no_of_following"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="7dp"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+
+                                            <TextView
+                                                android:id="@+id/total_following"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="0"
+                                                android:textColor="@android:color/black"
+                                                android:textSize="12sp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Following"
+                                                android:textColor="@android:color/black"
+                                                android:textSize="12sp" />
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <Button
+                                        android:id="@+id/edit_account_settings_btn"
+                                        android:layout_width="150dp"
+                                        android:layout_height="32dp"
+                                        android:layout_marginTop="2dp"
+                                        android:background="@drawable/buttons_background"
+                                        android:text="Follow"
+                                        android:textAllCaps="false" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="20dp">
+
+                                        <TextView
+                                            android:id="@+id/vote_account_settings_btn"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Votes  =  "
+                                            android:textAllCaps="false"
+                                            android:textColor="@android:color/black"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/total_votes"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="0"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:id="@+id/resume_view"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="15dp"
+                                        android:text="View Resume"
+                                        android:textAllCaps="false"
+                                        android:textColor="@android:color/black"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+
+
+            <!--                Other contents goes in here-->
+
+
+            <LinearLayout
+                android:id="@+id/scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+
+                <!--   Tabs for recyclerView -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal">
+                    <!--                android:background="@drawable/button_black_background"-->
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/images_grid_view_btn"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableTop="@drawable/ic_grid_post"
+                            android:text="Posts"
+                            android:textAllCaps="false"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/images_save_btn"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableTop="@drawable/ic_saved"
+                            android:text="Saves"
+                            android:textAllCaps="false"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/catalog_btn"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableTop="@drawable/ic_shopping_cart_black"
+                            android:text="Catalog"
+                            android:textAllCaps="false"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/resume_btn"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableTop="@drawable/ic_books"
+                            android:text="Resume"
+                            android:textAllCaps="false"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_upload_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_saved_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"></androidx.recyclerview.widget.RecyclerView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_resume_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"></androidx.recyclerview.widget.RecyclerView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_catalog_products"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"></androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
